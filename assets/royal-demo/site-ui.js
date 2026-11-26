@@ -27,6 +27,7 @@
 
   /* ---------------- Başlık, ilerleme, başa dön ---------------- */
   const header = doc.getElementById('masthead') || doc.querySelector('.masthead');
+  const mobileBuyBar = doc.querySelector('.mobile-buy-bar');
   const progress = doc.getElementById('scroll-progress-bar');
   const toTop = doc.getElementById('to-top');
   let frame = 0;
@@ -47,6 +48,19 @@
   addEventListener('scroll', queueScroll, { passive: true });
   addEventListener('resize', queueScroll);
   onScroll();
+
+  if ('ResizeObserver' in window) {
+    const bars = new ResizeObserver(entries => {
+      for (const {target} of entries) {
+        const height = target.getBoundingClientRect().height;
+        if (height) doc.documentElement.style.setProperty(
+          target === header ? '--header-h' : '--mobile-buy-height', height + 'px'
+        );
+      }
+    });
+    if (header) bars.observe(header);
+    if (mobileBuyBar) bars.observe(mobileBuyBar);
+  }
 
   toTop?.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: reduceMotion.matches ? 'auto' : 'smooth' });
