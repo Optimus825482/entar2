@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Merit Entertainment biletlerinizi PNR numarası veya telefon numaranızla sorgulayın.">
+  <meta name="theme-color" content="#100e0c">
+  <meta name="color-scheme" content="dark">
+  <title>Biletlerim | Merit Entertainment</title>
+  <link rel="stylesheet" href="assets/royal-demo/tickets.css">
+  <link rel="stylesheet" href="assets/royal-demo/site-ui.css">
+  <script src="assets/royal-demo/site-ui.js" defer></script>
+  <script src="assets/royal-demo/ticket-lookup.js" defer></script>
+  <script src="assets/royal-demo/navigation.js" defer></script>
+</head>
+<body id="sayfa-basi" class="lookup-page">
+  <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
+  <a class="skip" href="#icerik">İçeriğe geç</a>
+
+  <header class="masthead" id="masthead">
+    <div class="frame masthead-inner">
+      <a class="wordmark" href="merit-bilet.html" aria-label="Merit Entertainment ana sayfa">
+        <img src="assets/merit-entertainment-wordmark-gold.png" alt="" width="96" height="64">
+      </a>
+      <button class="menu-trigger" aria-expanded="false" aria-controls="site-navigation" type="button" hidden><span aria-hidden="true">☰</span> Menü</button>
+      <nav id="site-navigation" aria-label="Ana menü"><a href="merit-bilet.html">Ana Sayfa</a>
+<a href="merit-etkinlikler.html">Yaklaşan Etkinlikler</a>
+<a href="merit-takvim.html">Takvim</a>
+<a href="merit-biletlerim.html" aria-current="page">Biletlerim</a>
+<a href="merit-kurumsal.html">Hakkımızda</a></nav>
+      <a class="btn primary header-cta" href="merit-bilet.html?islem=bilet">Bilet Al <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="icerik">
+    <section class="lookup-hero">
+      <div class="frame">
+        <p class="eyebrow">MERIT ENTERTAINMENT</p>
+        <h1>Bilet<em>lerim</em></h1>
+        <p class="lookup-lead">PNR numaranız veya bilet alırken verdiğiniz telefon numarasıyla biletlerinizi görüntüleyin.</p>
+      </div>
+    </section>
+
+    <section class="frame section lookup-section" aria-labelledby="lookup-title">
+      <div class="lookup-grid">
+        <form class="lookup-card" id="lookup-form" novalidate>
+          <h2 id="lookup-title">Bilet sorgula</h2>
+          <label for="lookup-input">PNR numarası veya telefon</label>
+          <input id="lookup-input" name="query" type="text" autocomplete="off" spellcheck="false"
+                 placeholder="MR-3F9A2B7C1D4E veya 0533 123 45 67" required>
+          <p class="lookup-hint">PNR numarası e-biletinizin üzerinde yazar (MR- ile başlar).</p>
+          <p class="lookup-error" id="lookup-error" role="alert" hidden></p>
+          <button class="btn primary wide" type="submit">Biletlerimi bul <span aria-hidden="true">→</span></button>
+          <p class="lookup-note">Demo ortamı: biletler yalnızca bu tarayıcıda saklanır, e-posta gönderilmez.</p>
+        </form>
+
+        <div class="lookup-side">
+          <div class="detail-card">
+            <h3>Biletinizi bulamadınız mı?</h3>
+            <p>Satın alma sırasında kullandığınız telefon numarasının son 10 hanesini girmeyi deneyin.</p>
+            <p><a href="tel:+903926504000">+90 392 650 40 00</a><br><a href="mailto:entertainment@merithotels.com">entertainment@merithotels.com</a></p>
+          </div>
+          <div class="detail-card">
+            <h3>Girişte ne gerekiyor?</h3>
+            <p>PNR numaranızı veya QR kodlu e-biletinizi göstermeniz yeterli. Ek belge istenmez.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="lookup-results" id="lookup-results" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="frame">
+    <div class="footer-columns">
+      <div><a class="footer-signature" href="merit-bilet.html">Merit <em>Entertainment</em></a>
+      <p>Kuzey Kıbrıs'ın en prestijli gala salonlarında dünya standartlarında sahne prodüksiyonları ve unutulmaz konser geceleri.</p></div>
+      <nav aria-label="Keşfet"><h4>Keşfet</h4><a href="merit-bilet.html">Ana Sayfa</a><a href="merit-etkinlikler.html">Yaklaşan Etkinlikler</a><a href="merit-takvim.html">Etkinlik Takvimi</a><a href="merit-biletlerim.html">Biletlerim</a><a href="merit-kurumsal.html">Hakkımızda</a></nav>
+      <div class="footer-contact"><h4>İletişim</h4><address>Merit Royal Diamond Hotel &amp; Spa<br>Alsancak, Girne / KKTC<br><a href="tel:+903926504000">+90 392 650 40 00</a><br><a href="mailto:entertainment@merithotels.com">entertainment@merithotels.com</a></address></div>
+      <nav aria-label="Sosyal Medya"><h4>Sosyal Medya</h4><a href="https://www.instagram.com/merit.entertainment/">Instagram · @merit.entertainment</a><a href="https://www.facebook.com/meritentertainment/">Facebook · /meritentertainment</a><a href="https://www.merithotels.com/konserler">merithotels.com/konserler</a></nav>
+    </div><div class="footer-baseline"><span>© 2026 Merit Entertainment. Tüm hakları saklıdır.</span><span>Örnek bilet deneyimi · Bu işlemden ücret alınmaz.</span></div>
+  </div></footer>
+
+  <button class="to-top" type="button" id="to-top" aria-label="Sayfa başına dön"><span aria-hidden="true">↑</span></button>
+  <div id="toast-region" aria-live="polite" aria-atomic="true"></div>
+  <noscript><p class="noscript">Bilet sorgulamak için JavaScript'i etkinleştirin.</p></noscript>
+</body>
+</html>

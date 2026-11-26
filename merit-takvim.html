@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Merit Entertainment konser ve gala takvimi. Yaklaşan konserlere göz atın, bilet seçin.">
+  <meta name="theme-color" content="#100e0c">
+  <title>Etkinlik Takvimi | Merit Entertainment</title>
+  <link rel="stylesheet" href="assets/royal-demo/tickets.css">
+  <link rel="stylesheet" href="assets/royal-demo/site-ui.css">
+  <script src="assets/royal-demo/event-data.js" defer></script>
+  <script src="assets/royal-demo/clip-data.js" defer></script>
+  <script src="assets/royal-demo/motion-media.js" defer></script>
+  <script src="assets/royal-demo/calendar.js" defer></script>
+  <script src="assets/royal-demo/site-ui.js" defer></script>
+  <script src="assets/royal-demo/navigation.js" defer></script>
+</head>
+<body id="sayfa-basi" class="calendar-page">
+  <a class="skip" href="#yaklasan">Yaklaşan etkinliklere geç</a>
+  <header class="masthead">
+    <div class="frame masthead-inner">
+      <a class="wordmark" href="merit-bilet.html" aria-label="Merit Entertainment ana sayfa">
+        <img src="assets/merit-entertainment-wordmark-gold.png" alt="" width="96" height="64">
+      </a>
+      <button class="menu-trigger" aria-expanded="false" aria-controls="site-navigation" type="button" hidden><span aria-hidden="true">☰</span> Menü</button>
+      <nav id="site-navigation" aria-label="Ana menü"><a href="merit-bilet.html">Ana Sayfa</a>
+<a href="merit-etkinlikler.html">Yaklaşan Etkinlikler</a>
+<a href="merit-takvim.html" aria-current="page">Takvim</a>
+<a href="merit-biletlerim.html">Biletlerim</a>
+<a href="merit-kurumsal.html">Hakkımızda</a></nav>
+      <a class="btn primary header-cta" href="merit-bilet.html?islem=bilet">Bilet Al <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="calendar-hero" aria-labelledby="calendar-title">
+      <img src="assets/royal-demo/view-loca.webp" alt="" width="1500" height="1000" fetchpriority="high">
+      <div class="frame">
+        <p class="eyebrow">MERIT ENTERTAINMENT</p>
+        <h1 id="calendar-title">Konser ve<br><em>gala takvimi</em></h1>
+        <a class="btn text-button" href="#yaklasan">Yaklaşan etkinlikler <span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+    <section class="frame section programme" id="yaklasan" aria-labelledby="upcoming-title">
+      <div class="section-head">
+        <h2 id="upcoming-title">Yaklaşan <em>etkinlikler</em></h2>
+      </div>
+      <form class="discovery" role="search" aria-label="Yaklaşan konserleri filtrele">
+        <label>Sanatçı veya mekân<input id="event-query" type="search" placeholder="İsimle ara"></label>
+        <label>Konser tarihi<select id="event-month"><option value="">Tüm aylar</option></select></label>
+        <button class="btn secondary" type="reset">Temizle</button>
+      </form>
+      <p class="discovery-status" role="status" id="event-count"></p>
+      <div class="poster-grid" id="poster-grid"></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="frame">
+    <div class="footer-columns">
+      <div><a class="footer-signature" href="merit-bilet.html">Merit <em>Entertainment</em></a>
+      <p>Kuzey Kıbrıs'ın en prestijli gala salonlarında dünya standartlarında sahne prodüksiyonları ve unutulmaz konser geceleri.</p></div>
+      <nav aria-label="Keşfet"><h4>Keşfet</h4><a href="merit-bilet.html">Ana Sayfa</a><a href="merit-etkinlikler.html">Yaklaşan Etkinlikler</a><a href="merit-takvim.html">Etkinlik Takvimi</a><a href="merit-biletlerim.html">Biletlerim</a><a href="merit-kurumsal.html">Hakkımızda</a></nav>
+      <div class="footer-contact"><h4>İletişim</h4><address>Merit Royal Diamond Hotel &amp; Spa<br>Alsancak, Girne / KKTC<br><a href="tel:+903926504000">+90 392 650 40 00</a><br><a href="mailto:entertainment@merithotels.com">entertainment@merithotels.com</a></address></div>
+      <nav aria-label="Sosyal Medya"><h4>Sosyal Medya</h4><a href="https://www.instagram.com/merit.entertainment/">Instagram · @merit.entertainment</a><a href="https://www.facebook.com/meritentertainment/">Facebook · /meritentertainment</a><a href="https://www.merithotels.com/konserler">merithotels.com/konserler</a></nav>
+    </div><div class="footer-baseline">© 2026 Merit Entertainment. Tüm hakları saklıdır.</div>
+  </div></footer>
+</body>
+</html>
