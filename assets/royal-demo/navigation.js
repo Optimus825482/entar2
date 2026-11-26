@@ -9,10 +9,14 @@
     nav.hidden = compact.matches && !open;
   }
   setMenu(false);
-  compact.addEventListener('change', () => setMenu(false));
+  const resetMenu = () => setMenu(false);
+  if (compact.addEventListener) compact.addEventListener('change', resetMenu);
+  else compact.addListener(resetMenu);
+
   button.addEventListener('click', () => setMenu(nav.hidden));
-  header.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && compact.matches && !nav.hidden) {
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && compact.matches && !nav.hidden &&
+        !event.defaultPrevented && !document.querySelector('dialog[open]')) {
       setMenu(false);
       button.focus();
     }

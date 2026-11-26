@@ -5,7 +5,7 @@
    tickets.css'ten sonra yüklenir.
    ============================================================ */
 
-:root{--gold-soft:#e0c39c;--shadow-lg:0 26px 60px -30px #000000e6;--header-h:82px;--mobile-buy-height:calc(68px + env(safe-area-inset-bottom))}
+:root{--gold-soft:#e0c39c;--shadow-lg:0 26px 60px -30px #000000e6;--header-h:82px;--mobile-buy-height:calc(68px + env(safe-area-inset-bottom,0px))}
 html{scroll-padding-top:calc(var(--header-h) + 14px)}
 
 /* --- Okuma ilerlemesi --- */
@@ -120,7 +120,7 @@ html{scroll-padding-top:calc(var(--header-h) + 14px)}
 .share-actions{display:flex;flex-wrap:wrap;gap:7px}
 .share-feedback:empty{display:none}
 #instagram-share-panel{display:grid;gap:9px;border-top:1px solid var(--border);padding-top:13px}
-.share-story{width:auto;height:min(30dvh,260px);max-width:100%;object-fit:contain;justify-self:center;border:1px solid var(--border)}
+.share-story{width:auto;height:min(30vh,260px);height:min(30dvh,260px);max-width:100%;object-fit:contain;justify-self:center;border:1px solid var(--border)}
 [data-share-manual]{display:grid;gap:5px}
 [data-share-manual] textarea{width:100%}
 .toast{opacity:0;transform:translateY(12px);transition:opacity .26s,transform .26s;background:#1c1712f7;border:1px solid var(--line);border-radius:6px;padding:12px 18px;font-size:.88rem;line-height:1.45;text-align:center;box-shadow:var(--shadow-lg)}
@@ -143,10 +143,10 @@ html.js-reveal [data-reveal].is-in{opacity:1;transform:none}
 }
 @media screen and (max-width:790px){
   .mobile-buy-bar{display:flex}
-  html:has(.mobile-buy-bar){scroll-padding-bottom:var(--mobile-buy-height)}
-  body:has(.mobile-buy-bar){padding-bottom:var(--mobile-buy-height)}
-  body:has(.mobile-buy-bar) .to-top{bottom:calc(var(--mobile-buy-height) + 12px)}
-  body:has(.mobile-buy-bar) #toast-region{bottom:calc(var(--mobile-buy-height) + 14px)}
+  html.has-mobile-buy{scroll-padding-bottom:var(--mobile-buy-height)}
+  .has-mobile-buy body{padding-bottom:var(--mobile-buy-height)}
+  .has-mobile-buy body .to-top{bottom:calc(var(--mobile-buy-height) + 12px)}
+  .has-mobile-buy body #toast-region{bottom:calc(var(--mobile-buy-height) + 14px)}
   .countdown-units span{min-width:52px}
   .countdown-units strong{font-size:1.3rem}
 }
@@ -270,7 +270,7 @@ html.js-reveal [data-reveal].is-in{opacity:1;transform:none}
 }
 
 /* --- Etkinlik detay sayfası --- */
-.detail-hero{position:relative;isolation:isolate;overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:1fr auto;min-height:clamp(520px,64svh,680px);background:#14110e}
+.detail-hero{position:relative;isolation:isolate;overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:1fr auto;min-height:clamp(520px,64vh,680px);min-height:clamp(520px,64svh,680px);background:#14110e}
 .detail-hero-image{position:absolute;inset:0;z-index:-1;width:100%;height:100%;object-fit:cover;object-position:center 30%;filter:saturate(.9)}
 .detail-hero .hero-shade{background:linear-gradient(90deg,#100d0cfb 0%,#100d0cea 40%,#100d0c6e 70%,#100d0c14 100%),linear-gradient(0deg,#100e0c 2%,transparent 60%)}
 .detail-hero-image.poster-format{
@@ -349,7 +349,7 @@ html.js-reveal [data-reveal].is-in{opacity:1;transform:none}
   .price-table th,.price-table td{white-space:normal;overflow-wrap:anywhere}
 }
 @media(max-width:760px){
-  .detail-hero{min-height:clamp(430px,70svh,560px)}
+  .detail-hero{min-height:clamp(430px,70vh,560px);min-height:clamp(430px,70svh,560px)}
   .detail-hero-inner{padding-block:40px 30px}
   .detail-hero-image.poster-format{
     inset:0;width:100%;height:100%;aspect-ratio:auto;transform:none;

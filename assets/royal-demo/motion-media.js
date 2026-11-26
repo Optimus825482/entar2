@@ -162,7 +162,7 @@
     }
   });
 
-  reduceMotion.addEventListener('change', event => {
+  function onMotionChange(event) {
     if (event.matches) {
       clearTimeout(timer);
       timer = null;
@@ -170,7 +170,9 @@
     } else {
       refresh();
     }
-  });
+  }
+  if (reduceMotion.addEventListener) reduceMotion.addEventListener('change', onMotionChange);
+  else reduceMotion.addListener(onMotionChange);
 
   window.MeritMotion = { observe, refresh };
 })();
